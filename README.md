@@ -15,7 +15,7 @@
 
 ## Adding fake answers
 
-In order to add fake answers to a question you need add them into the fake_answers field within the answers table with a commer and space after each fake answer (but not the last one).
+In order to add fake answers to a question you need add them into the fake_answers field within the answers table with a comma and space after each fake answer (but not the last one).
 
 
 The admin panel does not work as of yet.

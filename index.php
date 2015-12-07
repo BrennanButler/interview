@@ -3,11 +3,6 @@
 include("inc/database.php");
 
 
-session_start();
-
-session_regenerate_id();
-
-
 ?>
 
 <!doctype html>
@@ -39,7 +34,7 @@ session_regenerate_id();
 
             <?php
 
-            $obj = new Database("localhost", 3307, "interview", "root", "usbw");
+            $obj = new Database("localhost", 3306, "interview", "root", "");
 
             $query = $obj->getConnection()->query("SELECT * FROM `language`");
 

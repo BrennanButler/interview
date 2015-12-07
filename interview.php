@@ -1,8 +1,5 @@
 <?php
 include("inc/database.php");
-session_start();
-
-session_regenerate_id();
 ?>
 
 <!doctype html>
@@ -34,7 +31,7 @@ session_regenerate_id();
           <ul class="questions">
           <?php
 
-          $obj = new Database("localhost", 3307, "interview", "root", "usbw");
+          $obj = new Database("localhost", 3306, "interview", "root", "");
           $query = $obj->getConnection()->prepare("SELECT question.question_id, question.question_title, answers.answer, answers.fake_answers FROM `question` INNER JOIN `answers` ON question.question_id = answers.question_id WHERE question.language_id=?");
           $query->bindParam(1, $_GET['l'], PDO::PARAM_INT);
           $query->execute();

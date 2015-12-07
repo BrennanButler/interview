@@ -13,7 +13,7 @@ foreach($_POST['qa'] as $key)
   array_push($data, array($temp[0], $temp[1]));
 }
 
-$obj = new Database("localhost", 3307, "interview", "root", "usbw");
+$obj = new Database("localhost", 3306, "interview", "root", "");
 
 for($i = 0; $i < count($data); $i++)
 {
